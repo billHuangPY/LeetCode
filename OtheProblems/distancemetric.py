@@ -14,10 +14,20 @@ class Solution(object):
             for j in pos:
                 distance += abs(i-j)
             output.append(distance)
-            
+
         return output
     
+    def distanceMetrictwoway(self, arr):
+        arr_dist = [0 for i in arr]
+        for i in range(len(arr)):
+            for j in range(i+1, len(arr)):
+                if arr[i] == arr[j]:
+                    dist = abs(i-j)
+                    arr_dist[i] += dist
+                    arr_dist[j] += dist
+        
+        return arr_dist
 
 
 sol = Solution()
-print(sol.distanceMetric([1,2,1,1,2,3]))
+print(sol.distanceMetrictwoway([1,2,1,1,2,3]))
