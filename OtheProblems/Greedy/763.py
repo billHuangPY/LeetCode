@@ -28,3 +28,17 @@ class Solution(object):
                     nums += len(s_dict[i])
             result.append(nums)
         return result
+
+    def partitionLabels_ans(self, S):
+        last = {c: i for i, c in enumerate(S)}
+        j = anchor = 0
+        ans = []
+        print(last)
+        for i, c in enumerate(S):
+            j = max(j, last[c])
+            print(i, c, j, last[c])
+            if i == j:
+                ans.append(i - anchor + 1)
+                anchor = i + 1
+            
+        return ans
