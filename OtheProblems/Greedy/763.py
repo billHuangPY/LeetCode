@@ -33,10 +33,8 @@ class Solution(object):
         last = {c: i for i, c in enumerate(S)}
         j = anchor = 0
         ans = []
-        print(last)
         for i, c in enumerate(S):
             j = max(j, last[c])
-            print(i, c, j, last[c])
             if i == j:
                 ans.append(i - anchor + 1)
                 anchor = i + 1
