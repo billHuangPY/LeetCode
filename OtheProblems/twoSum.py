@@ -5,6 +5,21 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        hashmap = {}
+        for index, i in enumerate(nums):
+            i_comp = target - i
+            if i_comp in hashmap:
+                return [index, hashmap[i_comp]]
+            hashmap[i] = index
+        return
+
+class SolutionQuestion(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
         sorted_num = sorted(nums)
         found = False
         half = int(target / 2)
@@ -36,4 +51,3 @@ class Solution(object):
                 if len(ans) == 2:
                     break
         return ans
-                
