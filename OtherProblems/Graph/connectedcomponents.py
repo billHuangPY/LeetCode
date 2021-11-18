@@ -12,7 +12,7 @@ class Solution(object):
             node1, node2 = edge[0], edge[1]
             adj[node1].append(node2)
             adj[node2].append(node1)
-        
+
         ## Create Visited List
         visited = [False for i in n]
 
@@ -21,10 +21,9 @@ class Solution(object):
             if not visited[i]:
                 count += 1
                 self.dfs()
-        
+
         return count
-    
-    
+
     def dfs(self, adj, visited, i):
         visited[i] = True
 

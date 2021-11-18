@@ -26,6 +26,7 @@ nums.length == 2 * n
 -104 <= nums[i] <= 104
 """
 
+
 class Solution(object):
     def arrayPairSum(self, nums):
         """
@@ -34,4 +35,3 @@ class Solution(object):
         """
         nums.sort()
         return sum(nums[::2])
-        

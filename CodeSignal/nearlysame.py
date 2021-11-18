@@ -1,4 +1,4 @@
-'''
+"""
 Given an array,
 nums = [9, 1, 1, 22, 315, 215, 345]
 Find how many possible pairs of (i,j), such that nums[i] and nums[j] have just one different digit.
@@ -11,4 +11,4 @@ For example from the above array:
 (315, 345) is a valid pair
 
 The answer of the example is 4
-'''
+"""

@@ -5,11 +5,10 @@ class Solution(object):
         :type wordDict: List[str]
         :rtype: bool
         """
-        mem = [-1 for i in range(len(s)+1)]
+        mem = [-1 for i in range(len(s) + 1)]
         ans = self.breakit(s, wordDict, mem)
         ## print(mem)
         return ans
-
 
     def breakit(self, s, wordDict, mem):
         n = len(s)
@@ -17,7 +16,7 @@ class Solution(object):
             return True
         elif mem[n] == 0:
             return False
-        
+
         validBreak = self.findValidBreak(s, wordDict)
         ## print(validBreak)
         for i in validBreak:
@@ -26,14 +25,14 @@ class Solution(object):
                 return True
         mem[n] = 0
         return False
-    
+
     def findValidBreak(self, s, wordDict):
         result = []
         for word in wordDict:
             length = len(word)
-            if not len(s)-length in result and s[length*-1:] == word:
-                result.append(len(s)-length)
-            
+            if not len(s) - length in result and s[length * -1 :] == word:
+                result.append(len(s) - length)
+
         ## print(result)
         return result
 

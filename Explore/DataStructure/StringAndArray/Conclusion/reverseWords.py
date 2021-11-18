@@ -42,10 +42,12 @@ There is at least one word in s.
 
 Follow up: Could you solve it in-place with O(1) extra space?
 """
+
+
 class Solution(object):
     def reverseWords(self, s):
         """
         :type s: str
         :rtype: str
         """
-        return ' '.join(s.split()[::-1])
+        return " ".join(s.split()[::-1])

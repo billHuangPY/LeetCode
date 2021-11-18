@@ -19,6 +19,8 @@ Constraints:
 a and b consist only of '0' or '1' characters.
 Each string does not contain leading zeros except for the zero itself.
 """
+
+
 class Solution(object):
     def addBinary(self, a, b):
         """
@@ -26,5 +28,4 @@ class Solution(object):
         :type b: str
         :rtype: str
         """
-        return bin(int(a,2) + int(b,2))[2:]
-        
+        return bin(int(a, 2) + int(b, 2))[2:]

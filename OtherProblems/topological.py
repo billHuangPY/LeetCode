@@ -13,6 +13,7 @@ def findtopological():
             DFS(prob, stack, visited, i, temp)
     print(stack[::-1])
 
+
 def DFS(adj, stack, visited, index, temp):
     visited[index] = True
     temp.append(index)
@@ -21,11 +22,12 @@ def DFS(adj, stack, visited, index, temp):
         if len(temp) > 0 and i in temp[:-1]:
             start = temp.index(i)
             temp.append(i)
-            print('cycle', temp[start:])
+            print("cycle", temp[start:])
             temp = []
         if not visited[i]:
             DFS(adj, stack, visited, i, temp)
 
     stack.append(index)
+
 
 findtopological()

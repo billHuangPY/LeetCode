@@ -21,6 +21,7 @@ Constraints:
 1 <= numRows <= 30
 """
 
+
 class Solution(object):
     def generate(self, numRows):
         """
@@ -42,10 +43,8 @@ class Solution(object):
 
             triagle.append([1])
 
-            for i in range(length-1):
-                triagle[length].append(
-                    prev[i] + prev[i+1]
-                )
+            for i in range(length - 1):
+                triagle[length].append(prev[i] + prev[i + 1])
 
             triagle[length].append(1)
             length = length + 1

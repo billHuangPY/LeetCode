@@ -6,11 +6,11 @@ class Solution(object):
         """
         if a[0] > a[1]:
             a = a[::-1]
-        
+
         maxdiff = self.findmaxdiff(a)
         max_len = -1
         ## Try all the possible diff
-        for diff in range(1,maxdiff+1):
+        for diff in range(1, maxdiff + 1):
             ## print("now diff", diff)
             current_len = 1
 
@@ -26,19 +26,19 @@ class Solution(object):
             found = True
 
             i = 0
-            while i < len(a)-1:
+            while i < len(a) - 1:
                 next_num = current_num + diff
                 ## print(i)
 
-                if next_num == a[i+1]:
+                if next_num == a[i + 1]:
                     ## print("inside, ona",current_num, next_num)
                     current_len += 1
                     current_num = next_num
                     ## print("curr len", current_len)
-                    if i == len(a)-2:
+                    if i == len(a) - 2:
                         ## print("break")
                         break
-                
+
                 elif next_num in b:
                     ## print("inside, onb",current_num, next_num)
                     ## print(i)
@@ -52,7 +52,7 @@ class Solution(object):
                     break
 
                 i += 1
-                
+
             if not found:
                 continue
 
@@ -66,13 +66,14 @@ class Solution(object):
             max_len = max(max_len, current_len)
 
         return max_len
-    
+
     def findmaxdiff(self, a):
-        maxdiff = 10**6
-        for i in range(len(a)-1):
-            maxdiff = min(a[i+1] - a[i], maxdiff)
+        maxdiff = 10 ** 6
+        for i in range(len(a) - 1):
+            maxdiff = min(a[i + 1] - a[i], maxdiff)
         return maxdiff
 
-a, b = [0,6,12], [-6,2,4,16,8,10,18,24,26,35]
+
+a, b = [0, 6, 12], [-6, 2, 4, 16, 8, 10, 18, 24, 26, 35]
 sol = Solution()
-print(sol.longestArithArrayLength(a,b))
+print(sol.longestArithArrayLength(a, b))

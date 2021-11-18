@@ -8,9 +8,9 @@ class Solution(object):
             return 0
         if n <= 2:
             return 1
-        
+
         curr, curr_fib, prev_fib = 2, 1, 1
-        
+
         while curr < n:
             tmp = curr_fib + prev_fib
             prev_fib = curr_fib

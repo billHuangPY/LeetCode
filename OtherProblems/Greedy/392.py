@@ -7,7 +7,7 @@ class Solution(object):
         """
         if len(s) <= 0:
             return True
-        
+
         index_s = 0
         for i in t:
             if i == s[index_s]:

@@ -30,6 +30,7 @@ The number of nodes in the list is in the range [0, 100].
 #         self.val = val
 #         self.next = next
 
+
 class Solution(object):
     def swapPairs(self, head):
         """

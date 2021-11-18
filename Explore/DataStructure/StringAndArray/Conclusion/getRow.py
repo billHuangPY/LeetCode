@@ -28,6 +28,7 @@ Constraints:
 Follow up: Could you optimize your algorithm to use only O(rowIndex) extra space?
 """
 
+
 class Solution(object):
     def getRow(self, rowIndex):
         """
@@ -35,10 +36,10 @@ class Solution(object):
         :rtype: List[int]
         """
         a = [1]
-        for i in range(2, rowIndex+2):
+        for i in range(2, rowIndex + 2):
             a.append(1)
-            
-            for j in range(i-2, 0, -1):
-                a[j] = a[j]+a[j-1]
-                
+
+            for j in range(i - 2, 0, -1):
+                a[j] = a[j] + a[j - 1]
+
         return a

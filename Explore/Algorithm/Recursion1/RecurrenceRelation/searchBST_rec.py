@@ -32,6 +32,7 @@ root is a binary search tree.
 #         self.left = left
 #         self.right = right
 
+
 class Solution(object):
     def searchBST(self, root, val):
         """
@@ -40,6 +41,7 @@ class Solution(object):
         :rtype: TreeNode
         """
         output = []
+
         def searchInBST(node):
             if not node:
                 return
@@ -49,10 +51,10 @@ class Solution(object):
                 searchInBST(node.left)
             else:
                 searchInBST(node.right)
-        
+
         searchInBST(root)
-        
-        if len(output) == 0: 
+
+        if len(output) == 0:
             return
         else:
             return output[0]

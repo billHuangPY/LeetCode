@@ -23,6 +23,8 @@ Constraints:
 
 Follow up: Could you minimize the total number of operations done?
 """
+
+
 class Solution(object):
     def moveZeroes(self, nums):
         """
@@ -34,4 +36,3 @@ class Solution(object):
             if nums[j] != 0:
                 nums[i], nums[j] = nums[j], nums[i]
                 i += 1
-                

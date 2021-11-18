@@ -33,6 +33,7 @@ Try to come up with as many solutions as you can. There are at least three diffe
 Could you do it in-place with O(1) extra space?
 """
 
+
 class Solution(object):
     def rotate(self, nums, k):
         """

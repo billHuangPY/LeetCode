@@ -34,6 +34,7 @@ Follow up: A linked list can be reversed either iteratively or recursively. Coul
 #         self.val = val
 #         self.next = next
 
+
 class Solution(object):
     def reverseList(self, head):
         """

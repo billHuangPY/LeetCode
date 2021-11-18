@@ -6,17 +6,17 @@ class Solution(object):
         """
         output = []
         for email in emails:
-            localname, domain = email.split('@')
-            localname_out = ''
+            localname, domain = email.split("@")
+            localname_out = ""
             for ch in localname:
-                if ch == '+':
+                if ch == "+":
                     break
-                elif ch == '.':
+                elif ch == ".":
                     continue
                 else:
                     localname_out += ch
-            out = localname_out + '@' + domain
+            out = localname_out + "@" + domain
             if not out in output:
                 output.append(out)
-        
+
         return len(output)

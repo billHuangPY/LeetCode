@@ -5,9 +5,9 @@ class Solution(object):
         :type target: str
         :rtype: str
         """
-        left, right = 0, len(letters)-1
+        left, right = 0, len(letters) - 1
         while left <= right:
-            p = left + int((right-left)/2)
+            p = left + int((right - left) / 2)
             if letters[p] > target:
                 right = p - 1
             else:

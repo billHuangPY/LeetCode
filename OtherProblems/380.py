@@ -1,9 +1,9 @@
 import random
-class RandomizedSet(object):
 
+
+class RandomizedSet(object):
     def __init__(self):
         self.rset = set([])
-        
 
     def insert(self, val):
         """
@@ -15,7 +15,6 @@ class RandomizedSet(object):
             return True
         else:
             return False
-        
 
     def remove(self, val):
         """
@@ -27,7 +26,6 @@ class RandomizedSet(object):
             return True
         else:
             return False
-        
 
     def getRandom(self):
         """

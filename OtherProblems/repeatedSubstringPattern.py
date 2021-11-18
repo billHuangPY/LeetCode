@@ -26,6 +26,7 @@ s consists of lowercase English letters.
 
 """
 
+
 class Solution(object):
     def repeatedSubstringPattern(self, s):
         """
@@ -35,7 +36,7 @@ class Solution(object):
         s_len = len(s)
         for i in range(1, s_len):
             if s_len % i == 0:
-                if s[:i]*(s_len/i) == s:
+                if s[:i] * (s_len / i) == s:
                     return True
-        
+
         return False

@@ -29,6 +29,7 @@ Constraints:
 0 <= digits[i] <= 9
 """
 
+
 class Solution(object):
     def plusOne(self, digits):
         """
@@ -36,17 +37,17 @@ class Solution(object):
         :rtype: List[int]
         """
         newDigits = digits
-        newDigits[len(digits)-1] = newDigits[len(digits)-1] + 1
+        newDigits[len(digits) - 1] = newDigits[len(digits) - 1] + 1
 
-        if newDigits[len(newDigits)-1] == 10:
-            for i in range(len(newDigits)-1, -1, -1):
+        if newDigits[len(newDigits) - 1] == 10:
+            for i in range(len(newDigits) - 1, -1, -1):
                 if newDigits[i] == 10:
                     if i == 0:
                         newDigits[0] = 0
-                        newDigits.insert(0,1)
+                        newDigits.insert(0, 1)
                     else:
                         newDigits[i] = 0
-                        newDigits[i-1] = newDigits[i-1] + 1
+                        newDigits[i - 1] = newDigits[i - 1] + 1
                 else:
                     return newDigits
             return newDigits

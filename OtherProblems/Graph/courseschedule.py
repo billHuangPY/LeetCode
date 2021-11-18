@@ -22,19 +22,19 @@ class Solution(object):
                     return False
 
         return True
-    
+
     def dfs(self, adj, visited, index):
         if visited[index] == -1:
             return False
-        
+
         if visited[index] == 1:
             return True
 
-        ## only the Same DFS path shared -1, once having branch visited turned to 1 
+        ## only the Same DFS path shared -1, once having branch visited turned to 1
         visited[index] = -1
         for i in adj[index]:
             if not self.dfs(adj, visited, i):
                 return False
-        
+
         visited[index] = 1
         return True

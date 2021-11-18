@@ -18,5 +18,5 @@ class Solution(object):
                 l += 1
             curr_substring.append(c)
             max_len = max(max_len, len(curr_substring))
-            
+
         return max_len

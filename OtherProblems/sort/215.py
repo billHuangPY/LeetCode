@@ -1,5 +1,6 @@
 from minheap import MinHeap
 
+
 class Solution(object):
     def findKthLargest(self, nums, k):
         """
@@ -15,8 +16,9 @@ class Solution(object):
                 if minheap.get_min() < i:
                     minheap.del_min()
                     minheap.insert(i)
-        
+
         return minheap.get_min()
+
 
 class Solution2(object):
     def findKthLargest(self, nums, k):

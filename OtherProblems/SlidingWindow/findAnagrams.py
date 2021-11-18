@@ -6,4 +6,3 @@ class Solution(object):
         :rtype: List[int]
         """
         p_len = len(p)
-        

@@ -42,6 +42,8 @@ Constraints:
 0 <= nums[i] <= 50
 0 <= val <= 100
 """
+
+
 class Solution(object):
     def removeElement(self, nums, val):
         """

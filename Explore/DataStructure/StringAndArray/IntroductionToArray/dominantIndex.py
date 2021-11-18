@@ -31,6 +31,7 @@ Constraints:
 The largest element in nums is unique.
 """
 
+
 class Solution(object):
     def dominantIndex(self, nums):
         """
@@ -43,7 +44,7 @@ class Solution(object):
         nums[maxIndex] = 0
         secNum = max(nums)
 
-        if maxNum >= secNum*2:
+        if maxNum >= secNum * 2:
             return maxIndex
         else:
             return -1

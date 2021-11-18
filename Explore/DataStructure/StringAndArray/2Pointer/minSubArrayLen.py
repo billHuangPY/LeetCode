@@ -28,6 +28,8 @@ Constraints:
 
 Follow up: If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log(n)).
 """
+
+
 class Solution(object):
     def minSubArrayLen(self, target, nums):
         """
@@ -37,15 +39,15 @@ class Solution(object):
         """
         return_value = len(nums) + 1
         sub_sum, start = 0, -1
-        
+
         for end in range(len(nums)):
             sub_sum += nums[end]
-            
-            while sub_sum >= target and end-start > 0:
-                return_value = min(return_value, end-start)
+
+            while sub_sum >= target and end - start > 0:
+                return_value = min(return_value, end - start)
                 start += 1
                 sub_sum -= nums[start]
-                    
+
         if return_value > len(nums):
             return 0
         else:

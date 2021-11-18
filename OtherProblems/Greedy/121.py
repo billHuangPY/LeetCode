@@ -4,7 +4,7 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        min_price = 10**5
+        min_price = 10 ** 5
         max_profit = 0
         for i in prices:
             if i < min_price:

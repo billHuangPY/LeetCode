@@ -22,6 +22,7 @@ There is at least one word in s.
 All the words in s are separated by a single space.
 """
 
+
 class Solution(object):
     def reverseWords(self, s):
         """
@@ -31,5 +32,5 @@ class Solution(object):
         a = s.split()
         for i in range(len(a)):
             a[i] = a[i][::-1]
-        
-        return ' '.join(a)
+
+        return " ".join(a)

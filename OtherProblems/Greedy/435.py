@@ -15,5 +15,5 @@ class Solution(object):
                 result += 1
             else:
                 curr = interval
-        
+
         return result

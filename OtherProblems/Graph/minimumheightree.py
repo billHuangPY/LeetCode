@@ -20,7 +20,7 @@ class Solution(object):
         for i in range(n):
             if len(adj[i]) == 1:
                 leaves.append(i)
-        
+
         ## The Possible root could be one or two
         while n > 2:
             new_leaves = []
@@ -28,12 +28,12 @@ class Solution(object):
 
             ## Find the correspond node near the leaves and remove the leaves from their adjacency list
             for i in leaves:
-                j  = adj[i]
+                j = adj[i]
                 adj[j].remove(i)
                 ## Find if the correspond node became a leaf
                 if len(adj[j]) == 1:
                     new_leaves.append(j)
-            
+
             leaves = new_leaves
-        
+
         return leaves

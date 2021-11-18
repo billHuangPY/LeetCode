@@ -7,7 +7,7 @@ class Solution(object):
         profit = 0
         max_price = prices[0]
         min_price = prices[0]
-        
+
         for price in prices[1:]:
             if price < max_price:
                 profit += max_price - min_price

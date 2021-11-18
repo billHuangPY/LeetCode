@@ -6,7 +6,7 @@ class Solution(object):
         """
         if len(points) <= 1:
             return len(points)
-        
+
         result = 1
         sorted_x = sorted(points, key=lambda x: x[1])
         curr_x = sorted_x[0][1]
@@ -17,5 +17,5 @@ class Solution(object):
             else:
                 result += 1
                 curr_x = i[1]
-        
+
         return result

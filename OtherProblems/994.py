@@ -5,11 +5,11 @@ class Solution(object):
         :rtype: int
         """
         k = len(grid[0])
-        
+
         node_value = []
         edges = []
         rotten = []
-        node_num = len(grid)*k
+        node_num = len(grid) * k
         for i in range(len(grid)):
             for j in range(len(grid[0])):
                 edges.append([])
@@ -20,16 +20,16 @@ class Solution(object):
                     node_num -= 1
                     continue
                 elif grid[i][j] == 2:
-                    rotten.append(i*k+j)
-                if i > 0 and grid[i-1][j] > 0:
-                    edges[i*k+j].append((i-1)*k+j)
-                if j > 0 and grid[i][j-1] > 0:
-                    edges[i*k+j].append(i*k+j-1)
-                if i < len(grid)-1 and grid[i+1][j] > 0:
-                    edges[i*k+j].append((i+1)*k+j)
-                if j < k-1 and grid[i][j+1] > 0:
-                    edges[i*k+j].append(i*k+j+1)
-        
+                    rotten.append(i * k + j)
+                if i > 0 and grid[i - 1][j] > 0:
+                    edges[i * k + j].append((i - 1) * k + j)
+                if j > 0 and grid[i][j - 1] > 0:
+                    edges[i * k + j].append(i * k + j - 1)
+                if i < len(grid) - 1 and grid[i + 1][j] > 0:
+                    edges[i * k + j].append((i + 1) * k + j)
+                if j < k - 1 and grid[i][j + 1] > 0:
+                    edges[i * k + j].append(i * k + j + 1)
+
         visited, pre_visited_num = set(rotten), len(rotten)
         times = -1
         while (times > 0 and not pre_visited_num == len(visited)) or times <= 0:
@@ -42,8 +42,5 @@ class Solution(object):
                         round_rotten.add(adj)
             rotten = round_rotten
             times += 1
-            
-        return -1 if not len(visited) == node_num else times-1
-        
-                    
-                
+
+        return -1 if not len(visited) == node_num else times - 1

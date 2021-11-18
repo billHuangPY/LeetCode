@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: None Do not return anything, modify nums in-place instead.
         """
         if len(nums) == 1:
-            return 
+            return
         start = 0
         index = 0
         end = len(nums) - 1
@@ -22,5 +22,5 @@ class Solution(object):
                 end -= 1
             else:
                 index += 1
-        
+
         return

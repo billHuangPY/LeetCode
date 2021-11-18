@@ -8,7 +8,7 @@ class Solution(object):
         ## Create Adjacent List
         adj = [[] for i in range(n)]
         for edge in dislikes:
-            node1, node2 = edge[0]-1, edge[1]-1
+            node1, node2 = edge[0] - 1, edge[1] - 1
             adj[node1].append(node2)
             adj[node2].append(node1)
 
@@ -18,9 +18,9 @@ class Solution(object):
         for i in range(n):
             if groups[i] == 0 and not self.dfs(adj, i, 1, groups):
                 return False
-        
+
         return True
-    
+
     def dfs(self, adj, index, group, groups):
         groups[index] = group
 
@@ -34,4 +34,3 @@ class Solution(object):
                 return False
 
         return True
-

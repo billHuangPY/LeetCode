@@ -10,15 +10,17 @@ class Solution(object):
                 s_dict[s[i]].append(i)
             else:
                 s_dict[s[i]] = [i]
-        
+
         s_dict = sorted(s_dict.values(), key=lambda x: x[0])
-        
+
         result = []
         while s_dict:
             left, right = s_dict[0][0], s_dict[0][-1]
             nums = len(s_dict[0])
-            for i in range(1,len(s_dict)+1):
-                if i == len(s_dict) or (s_dict[i][0] > right and nums == right - left + 1):
+            for i in range(1, len(s_dict) + 1):
+                if i == len(s_dict) or (
+                    s_dict[i][0] > right and nums == right - left + 1
+                ):
                     for j in range(i):
                         s_dict.pop(0)
                     break
@@ -38,5 +40,5 @@ class Solution(object):
             if i == j:
                 ans.append(i - anchor + 1)
                 anchor = i + 1
-            
+
         return ans

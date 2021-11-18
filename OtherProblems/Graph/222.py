@@ -15,4 +15,3 @@ class Solution(object):
         sum_ = (1 + self.countNodes(root.left)) if root.left else 1
         sum_ += self.countNodes(root.right) if root.right else 0
         return sum_
-        

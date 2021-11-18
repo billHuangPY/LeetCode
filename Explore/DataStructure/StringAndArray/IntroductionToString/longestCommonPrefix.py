@@ -23,6 +23,7 @@ Constraints:
 strs[i] consists of only lower-case English letters.
 """
 
+
 class Solution(object):
     def longestCommonPrefix(self, strs):
         """
@@ -32,20 +33,20 @@ class Solution(object):
         output = ""
         if len(strs[0]) == 0:
             return output
-        
+
         for i in range(len(strs[0])):
             prefix_char = strs[0][i]
-            
+
             haveit = 1
             for target in strs[1:]:
-                if i > len(target)-1:
+                if i > len(target) - 1:
                     return output
                 elif target[i] == prefix_char:
                     haveit += 1
                 else:
                     return output
-                
+
             if haveit == len(strs):
                 output += prefix_char
-        
+
         return output

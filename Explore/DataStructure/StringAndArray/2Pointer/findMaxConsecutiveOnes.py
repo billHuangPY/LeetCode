@@ -19,6 +19,8 @@ Constraints:
 1 <= nums.length <= 105
 nums[i] is either 0 or 1.
 """
+
+
 class Solution(object):
     def findMaxConsecutiveOnes(self, nums):
         """
@@ -33,9 +35,8 @@ class Solution(object):
                 if length > return_value:
                     return_value = length
                 length = 0
-        
+
         if length > return_value:
             return length
-            
+
         return return_value
-        
