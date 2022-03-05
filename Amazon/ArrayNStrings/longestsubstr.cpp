@@ -11,7 +11,7 @@ public:
         int ans = 0;
         while (right < s.length()) {
             char r = s[right];
-            if (map.count(r) > 0)
+            if (map.find(r) != map.end())
                 map[r] ++;
             else
                 map[r] = 1;
